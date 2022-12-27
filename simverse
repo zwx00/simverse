@@ -865,6 +865,13 @@ tweak_repos() {
   present_cwd
   git fetch --depth=1000 --tags
   present git checkout v0.20.1-beta
+
+  cd "$SIMVERSE_REPOS_ABSOLUTE/lnd"
+  say "pinning lnd to work in general"
+  present_cwd
+  git fetch --depth=1000 --tags
+  present git checkout v0.12.1-beta
+
 }
 
 init_repo() {
